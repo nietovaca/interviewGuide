@@ -54,13 +54,36 @@
 
 1. How do you define a global variable?
 1. How do you define a global variable inside of a function?
+
 1. What does IIFE (pronounced iffy) mean?
-1. What's a closure?
+> Immediately Invoked Function Expression (() => {
+  /* ... */
+})();
+
+1. What's a closure? 
+> "lexical scoping" nested functions have access to variables declared in outer scope. Used closure anywhere you might normally use an object with only a single method. "Call back functions" the closure is referring to an enclosed function - given access to outer functions scope. 
+
 1. How does event bubbling work?
+> When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors. ie (div surrounding another tag with an event handler, the event handler is first in order of opperations. 
+
 1. How do you avoid event bubbling?
+> event.stopPropagation(); prevents further propagation of the current event in the capturing an bubbling phases. It doesn't prevent default behaviors from occurring, clicks on links are still processed. If you want to stop those behaviors, try the event.preventDefault(); method. 
+
 1. What is the difference between `==` and `===`?
+> == abstract comparission: "1" and 1 return true (equality)
+> === strict comparission: "1" and 1 return false (identity) 
+ 
 1. What is the difference between `null` and `undefined`?
-1. What are the primitive data types?
+> null: no value // absence of any object value 
+> undefined: lack of value or unknown value 
+> null === undefined //false 
+> null == undefined //true 
+> !null //true 
+> isNaN(1 + null) //false 
+> isNaN(1 + undefined) // true 
+
+1. What are the primitive data types? 
+> cannot be altered: null, undefined, string, number, boolean, symbol, biginit (large ints, appends n to end of interger)  
 
 ## React:
 
